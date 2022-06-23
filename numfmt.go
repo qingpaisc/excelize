@@ -932,6 +932,9 @@ func (nf *numberFormat) textHandler() (result string) {
 		if token.TType == nfp.TokenTypeTextPlaceHolder {
 			result += nf.value
 		}
+		if token.TType == nfp.TokenTypeGeneral {
+			result = nf.value
+		}
 	}
 	return result
 }
